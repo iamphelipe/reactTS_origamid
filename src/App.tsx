@@ -2,6 +2,7 @@ import React from 'react';
 import Button from './Button';
 import Button2 from './Button2';
 import Button3 from './Button3';
+import Checkbox from './Checkbox';
 
 function App() {
   const [total, setTotal] = React.useState(0);
@@ -11,6 +12,7 @@ function App() {
   }
 
   return (
+    <>
     <div>
       <p>Exemplo 1</p>
       <p>Total: {total}</p>
@@ -31,6 +33,16 @@ function App() {
       {/* Interfaces e Tipos 1 */}
       <Button3>Incrementar</Button3>
     </div>
+
+    <div>
+      {/* Eventos - Básicos TSX */}
+
+      <Checkbox label='Termos e Condições' />
+    </div>
+
+
+    </>
+    
   );
 }
 
