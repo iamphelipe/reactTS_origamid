@@ -1,6 +1,7 @@
 import React from 'react';
 import Button from './Button';
 import Button2 from './Button2';
+import Button3 from './Button3';
 
 function App() {
   const [total, setTotal] = React.useState(0);
@@ -27,6 +28,8 @@ function App() {
        >
         Incrementaar
       </Button2>
+      {/* Interfaces e Tipos 1 */}
+      <Button3>Incrementar</Button3>
     </div>
   );
 }
