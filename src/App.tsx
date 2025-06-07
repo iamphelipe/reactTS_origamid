@@ -3,8 +3,30 @@ import Button from './Button';
 import Button2 from './Button2';
 import Button3 from './Button3';
 import Checkbox from './Checkbox';
+import Button4 from './Button4';
+
+function user() {
+  return {
+    nome: "Phelipe",
+    profissao: "Desenvolvedor"
+  }
+}
+
+type User = {
+  nome: string;
+  profissao: string
+}
 
 function App() {
+  const [data, setData] = React.useState<null | User>(null)
+  const [total4, setTotal4] = React.useState(0)
+
+  React.useEffect(() => {
+    setTimeout(() => {
+      setData(user())
+    }, 1000)
+  }, [])
+  
   const [total, setTotal] = React.useState(0);
 
   function incrementar() {
@@ -38,6 +60,14 @@ function App() {
       {/* Eventos - Básicos TSX */}
 
       <Checkbox label='Termos e Condições' />
+    </div>
+
+    <div>
+      {/* UseState */}
+      {data !== null && <p>{data.nome}: {data.profissao}</p>}
+      <Button4 incrementar={setTotal4}/>
+      <p>{total4}</p>
+
     </div>
 
 
