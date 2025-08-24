@@ -5,6 +5,8 @@ import Button3 from './Button3';
 import Checkbox from './Checkbox';
 import Button4 from './Button4';
 
+import videoSrc from "./video/video.mp4"
+
 function user() {
   return {
     nome: "Phelipe",
@@ -18,6 +20,14 @@ type User = {
 }
 
 function App() {
+
+  //useRef
+
+  const video = React.useRef<HTMLVideoElement>(null)
+
+  React.useEffect(() => {
+    console.log(video.current)
+  }, [])
 
   function useEffectCallBack() {
     console.log("Montou");
@@ -84,6 +94,14 @@ function App() {
 
     <div>
       Effect
+    </div>
+
+    <div>
+      <video controls ref={video} src={videoSrc}></video>
+      <div className="flex">
+        <button onClick={() => video.current?.play()}>Play</button>
+        <button onClick={() => video.current?.pause()}>Pause</button>
+      </div>
     </div>
 
     </>
