@@ -18,6 +18,17 @@ type User = {
 }
 
 function App() {
+
+  function useEffectCallBack() {
+    console.log("Montou");
+    return () => {
+      console.log("Desmontou");
+    }
+  }
+
+  // useEffect
+  React.useEffect(useEffectCallBack,[])
+
   const [data, setData] = React.useState<null | User>(null)
   const [total4, setTotal4] = React.useState(0)
 
@@ -70,6 +81,10 @@ function App() {
 
     </div>
 
+
+    <div>
+      Effect
+    </div>
 
     </>
     
