@@ -1,9 +1,9 @@
 import React from 'react';
-import Button from './Button';
-import Button2 from './Button2';
-import Button3 from './Button3';
-import Checkbox from './Checkbox';
-import Button4 from './Button4';
+import Button from './components/Button';
+import Button2 from './components/Button2';
+import Button3 from './components/Button3';
+import Checkbox from './components/Checkbox';
+import Button4 from './components/Button4';
 
 import videoSrc from "./video/video.mp4"
 
