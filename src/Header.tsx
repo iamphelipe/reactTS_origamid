@@ -1,8 +1,8 @@
 import React from 'react'
-import { UiContext, useUi } from './UiContext'
+import {useUi } from './UiContext'
 
 const Header = () => {
-   const {dark, setDark} = useUi()
+   const {setDark} = useUi()
    
   return (
       <button onClick={() => setDark((b) => !b)}>Mode</button>
